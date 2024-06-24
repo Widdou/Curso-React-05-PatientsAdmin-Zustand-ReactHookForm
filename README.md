@@ -1,5 +1,9 @@
 [LiveSite]()
 
+# Overview
+
+A platform to 
+
 # First Steps
 
 <details>
@@ -39,9 +43,10 @@
 - Tailwind CSS
 - Zustand
 - React Hook Form
+- React Toastify
 </details>
 
-# React Hook Form
+## React Hook Form
 
 [Official Documentation](https://react-hook-form.com/)
 
@@ -53,7 +58,73 @@ Alternatives:
 
 ``npm i react-hook-form``
 
-# Zustand
+### Usage
 
+```JavaScript
+  import { useForm } from "react-hook-form"
+
+  export default function Form() {
+
+    const { register } = useForm()
+
+    return (<form>
+
+      <input
+        id='name'
+        {...register('name', {
+          required: true
+        })}      
+      />
+    
+    </form>)
+
+  }
+```
+
+Import the `useForm` hook, from it deconstruct the `register` function.
+Then pass to each `<input>` element you want to register and be managed by react-hook-form.
+
+Register accepts the name to identify the input and an object with options.
+It's passed deconstructed so all the attributes are incorporated into the input element.
+
+#### Form Validation
+
+Import the `handleSubmit` function, and pass it to the form `onSubmit` attribute.
+Define a custom function to handle the logic.
+
+```JavaScript
+
+  const { register, handleSubmit } = useForm()
+
+  const registerPatient = () => {
+    console.log('Nuevo Paciente')
+  }
+
+  return(
+    <form
+      noValidate
+      onSubmit={handleSubmit(registerPatient)}
+    >
+      ...
+    </form>
+  )
+
+```
+
+#### Managing the FormState & Errors
+
+  ``const { register, handleSubmit, formState : { errors } } = useForm()``
+
+  ``errors.[FieldName]``
+
+
+## Zustand
+
+Context State Management simplified
+
+Alternatives:
+- Redux
+
+## React Toastify 
 
 
