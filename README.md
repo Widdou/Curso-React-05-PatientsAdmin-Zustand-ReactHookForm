@@ -2,6 +2,11 @@
 
 # First Steps
 
+<details>
+<summary>List of steps during the project construction</summary>
+
+`npm create vite@latest`
+
 1. Clean up, remvoe the Vite boilerplate files. Such as public icons, assets folder, delete the `App.css` and clear `App.tsx` & `index.css` content.
 
 2. Install Tailwind with:
@@ -10,16 +15,20 @@
   <details>
     <summary>- Set the tailwind directives on `index.css`</summary>
   
-    ```CSS
-
-      @tailwind base;
-      @tailwind components;
-      @tailwind utilities;    
-      
-    ```
+```CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
   </details>
 
-3. 
+3. Build the `PatientsList.tsx` & `PatientForm.tsx` components
+
+4. Install React Hook Form to validate the PatientForm
+
+5.
+
+</details>
 
 
 # Libraries & Technologies
@@ -44,6 +53,7 @@ Alternatives:
 
 ``npm i react-hook-form``
 
+# Zustand
 
 
 
