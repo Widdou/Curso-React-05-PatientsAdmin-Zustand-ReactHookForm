@@ -1,3 +1,5 @@
+[LiveSite]()
+
 # First Steps
 
 1. Clean up, remvoe the Vite boilerplate files. Such as public icons, assets folder, delete the `App.css` and clear `App.tsx` & `index.css` content.
@@ -22,3 +24,6 @@
 - Tailwind CSS
 - Zustand
 - React Hook Form
+
+# React Hook Form 
+
